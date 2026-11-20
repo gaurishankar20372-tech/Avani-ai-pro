@@ -763,9 +763,20 @@ export default function App() {
     (import.meta as any).env?.VITE_BACKEND_URL || "https://avani-ai-pro.onrender.com"
   ).trim().replace(/\/$/, "");
   const [backendUrl, setBackendUrl] = useState<string>(() => {
-    return localStorage.getItem("backend_url") || localStorage.getItem("avani_backend_url") || DEFAULT_BACKEND;
-  });
+  const saved =
+    localStorage.getItem("backend_url") ||
+    localStorage.getItem("avani_backend_url");
 
+  const oldBackend = "https://avani-ai-zo2a.onrender.com";
+
+  if (!saved || saved.replace(/\/$/, "") === oldBackend) {
+    localStorage.setItem("backend_url", DEFAULT_BACKEND);
+    localStorage.setItem("avani_backend_url", DEFAULT_BACKEND);
+    return DEFAULT_BACKEND;
+  }
+
+  return saved.trim().replace(/\/$/, "");
+});
   const getBackendUrl = (): string => {
     if (backendUrl) return backendUrl.trim().replace(/\/$/, "");
     return DEFAULT_BACKEND;
