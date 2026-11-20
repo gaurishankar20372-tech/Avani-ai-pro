@@ -105,7 +105,7 @@ export default function App() {
     return [
       {
         sender: "bot",
-        content: "नमस्ते! 🌸 मैं अवनी (Avani) हूँ—आपकी विनम्र, बुद्धिमान और आज्ञाकारी AI सहायक। आप मुझसे दुनिया की करंट सिचुएशन 🌍, ताज़ा समाचार 📰, कोडिंग 💻, या कोई भी सवाल पूछ सकते हैं। मैं आपकी क्या मदद कर सकती हूँ?",
+        content: "नमस्ते! 🌸 I am Avani ai. your obedient and intelligent ai assistant.How can I assest you?",
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ];
@@ -669,7 +669,7 @@ export default function App() {
       messages: [
         {
           sender: "bot",
-          content: "नमस्ते! 🌸 मैं अवनी (Avani) हूँ—आपकी विनम्र, बुद्धिमान और आज्ञाकारी AI सहायक। आप मुझसे दुनिया की करंट सिचुएशन 🌍, ताज़ा समाचार 📰, कोडिंग 💻, या कोई भी सवाल पूछ सकते हैं। मैं आपकी क्या मदद कर सकती हूँ?",
+          content: "नमस्ते! 🌸 I am Avani ai.your obedient and Intelligent ai assistant. How can I assist you?",
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }
       ],
