@@ -760,7 +760,7 @@ export default function App() {
   const [showHelp, setShowHelp] = useState(false);
   const [showSecurity, setShowSecurity] = useState(false);
   const DEFAULT_BACKEND = (
-    (import.meta as any).env?.VITE_BACKEND_URL || "https://avani-ai-zo2a.onrender.com"
+    (import.meta as any).env?.VITE_BACKEND_URL || "https://avani-ai-pro.onrender.com"
   ).trim().replace(/\/$/, "");
   const [backendUrl, setBackendUrl] = useState<string>(() => {
     return localStorage.getItem("backend_url") || localStorage.getItem("avani_backend_url") || DEFAULT_BACKEND;
@@ -805,7 +805,7 @@ export default function App() {
   const [showMemories, setShowMemories] = useState(false);
   const [newManualFact, setNewManualFact] = useState("");
   const [githubRepo, setGithubRepo] = useState<string>(() => {
-    return localStorage.getItem("avani_creator_github_repo") || "https://github.com/gaurishankar20372-tech/Shruti.ai-.git";
+    return localStorage.getItem("avani_creator_github_repo") || "https://github.com/gaurishankar20372-tech/Avani-ai-pro-.git";
   });
   const [githubInput, setGithubInput] = useState<string>("");
   const [isEditingGithub, setIsEditingGithub] = useState<boolean>(false);
