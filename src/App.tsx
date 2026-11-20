@@ -759,15 +759,15 @@ export default function App() {
   const [toolLogs, setToolLogs] = useState<ToolLog[]>([]);
   const [showHelp, setShowHelp] = useState(false);
   const [showSecurity, setShowSecurity] = useState(false);
-  const DEFAULT_BACKEND = "https://avani-ai-zo2a.onrender.com";
+  const DEFAULT_BACKEND = (
+    (import.meta as any).env?.VITE_BACKEND_URL || "https://avani-ai-zo2a.onrender.com"
+  ).trim().replace(/\/$/, "");
   const [backendUrl, setBackendUrl] = useState<string>(() => {
     return localStorage.getItem("backend_url") || localStorage.getItem("avani_backend_url") || DEFAULT_BACKEND;
   });
 
   const getBackendUrl = (): string => {
     if (backendUrl) return backendUrl.trim().replace(/\/$/, "");
-    const envUrl = (import.meta as any).env?.VITE_BACKEND_URL;
-    if (envUrl) return envUrl.trim().replace(/\/$/, "");
     return DEFAULT_BACKEND;
   };
 
